@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>My Todo</title>
+</head>
+
+<body>
+  <div class="navbar">
+    <h1 class="heading" onclick="testing()">My Todo</h1>
+  </div>
+  <div class="container">
+    <div class="list-container">
+      <div class="main">
+        <div class="header">
+          <h2 class="heading">My Todos</h2>
+        </div>
+        <div class="list">
+          <ul class="todo-list" id="todo-list"></ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-container" id="form">
+      <div class="main">
+        <h2 class="heading">Add Todo</h2>
+
+        <div class="form-control">
+          <label for="title">Title</label>
+          <input class="input-tags" type="text" id="title" placeholder="Enter title" required />
+        </div>
+
+        <div class="form-control">
+          <label for="description">Description</label>
+          <input class="input-tags" name="description" id="description" cols="30" rows="10"
+            placeholder="Enter description" required />
+        </div>
+
+        <div class="form-control">
+          <label for="date">Date</label>
+          <input class="input-tags" type="date" id="date" required />
+        </div>
+
+        <div class="form-control">
+          <label for="time">Time</label>
+          <input class="input-tags" type="time" id="time" required />
+        </div>
+
+        <div class="selectors">
+          <div class="selector-form-control">
+            <label class="input-tags-selectors-label" for="priority">Priority</label>
+            <select class="input-tags-selectors" name="priority" id="priority" required>
+              <option value="" selected>Select</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+
+          <div class="selector-form-control">
+            <label class="input-tags-selectors-label" for="status">Status</label>
+            <select class="input-tags-selectors" name="status" id="status" required>
+              <option value="" selected>Select</option>
+              <option value="todo">Todo</option>
+              <option value="inprogress">In Progress</option>
+              <option value="done">Done</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="form-btn" id="submit" onclick="addTodo()">Submit</button>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
