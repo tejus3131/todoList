@@ -1,16 +1,19 @@
-*{
+/* Reset default styles for all elements */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+/* Global styles */
+body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
 
-.navbar{
-    background-color: rgb(38, 106, 255);
+/* Navbar styles */
+.navbar {
+    background-color: #4a90e2; /* Blue background */
     height: 50px;
     width: 100%;
     display: flex;
@@ -18,15 +21,14 @@ body{
     justify-content: space-between;
 }
 
-.heading{
-    margin: auto;
+.heading {
     color: white;
     text-shadow: 2px 2px 4px #000000;
     margin: 20px;
 }
 
-
-.main{
+/* Main content container */
+.main {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -35,13 +37,11 @@ body{
     margin: auto;
 }
 
-.header{
-    display: flex;
-    flex-direction: row;
-}
-
-.addbtn{
-    background-color: rgba(38, 107, 255, 0.7);
+/* Button styles */
+.addbtn,
+.form-btn,
+.btn {
+    background-color: #4a90e2; /* Blue background */
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -50,7 +50,8 @@ body{
     box-shadow: 1px 1px 2px #000000;
 }
 
-.list{
+/* List styles */
+.list {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -60,13 +61,13 @@ body{
     overflow-y: auto;
 }
 
-.todo-list{
+.todo-list {
     list-style-type: none;
 }
 
-.todo{
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+.todo {
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
     padding: 10px;
     border-radius: 5px;
     margin: 10px;
@@ -76,37 +77,26 @@ body{
     height: 20vh;
 }
 
-.todo-header{
+/* Additional styling for todo elements */
+.todo-header,
+.todo-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.todo-footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.main {
-    border: #000000 solid 1px;
-    border-radius: 5px;
-    margin: 15px;
-    padding: 20px;
-    width: 48vw;
-    height: 88vh;
-    box-shadow: 2px 2px 4px #000000;
-    background-color: rgba(38, 107, 255, 0.27);
-}
-
-.container{
+/* Container for the main content */
+.container {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.form-control{
+/* Form control and input styles */
+.form-control,
+.selectors,
+.selector-form-control {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -115,103 +105,90 @@ body{
     margin: auto;
 }
 
-.input-tags{
+.input-tags,
+.input-tags-selectors {
     width: 40vw;
     height: 5vh;
     border-radius: 5px;
-    border: #000000 solid 1px;
+    border: 1px solid #000000; /* Black border */
     margin: 10px;
     padding: 10px;
     box-shadow: 1px 1px 2px #000000;
-
+    font-size: 16px;
 }
 
-.selectors{
-    display: flex;
-    margin: auto;
-    justify-content: space-evenly;
-    width: 40vw;
-}
-
-.selector-form-control{
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.input-tags-selectors{
-    width: 19.5vw;
-    height: 5vh;
-    border-radius: 5px;
-    border: #000000 solid 1px;
-    margin: 10px;
-    padding: 10px;
-    box-shadow: 1px 1px 2px #000000;
-
-}
-
-.input-tags-selectors-label{
+/* Label style for selectors */
+.input-tags-selectors-label {
     margin-left: 14px;
 }
 
-.form-btn{
-    background-color: rgba(38, 107, 255, 0.7);
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    margin: 10px;
-    text-align: center;
-    box-shadow: 1px 1px 2px #000000;
-    width: 40.75vw;
-}
+/* Responsive styles for mobile devices */
+@media only screen and (max-width: 768px) {
+    /* Navbar styles for mobile */
+    .navbar {
+        text-align: center;
+        padding: 10px;
+    }
 
-.btn{
-    background-color: rgba(38, 107, 255, 0.7);
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-    margin: 5px;
-    text-align: center;
-    box-shadow: 1px 1px 2px #000000;
-    width: 60px;
-}
+    /* Heading styles for mobile */
+    .heading {
+        font-size: 20px;
+    }
 
-.todo-title{
-    margin: 10px;
-}
+    /* Input styles for mobile */
+    .input-tags,
+    .input-tags-selectors {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid #000000; /* Black border */
+        border-radius: 5px;
+        background-color: #f5f5f5; /* Light gray background */
+        font-size: 16px;
+    }
 
-.todo-description{
-    margin: 10px;
-}
+    .input-tags-selectors-label {
+        margin-bottom: 5px;
+    }
 
-.todo-tags{
-    margin: 10px;
-}
+    /* Form button styles for mobile */
+    .form-btn {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 5px;
+        background-color: #4a90e2; /* Blue background */
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
 
-.todo-status{
-    margin: 10px;
-}
+    /* List item styles for mobile */
+    .todo-list li {
+        margin-bottom: 10px;
+    }
 
-.todo-date{
-    margin: 10px;
-}
+    /* List container styles for mobile */
+    .list {
+        padding: 10px;
+    }
 
-.todo-time{
-    margin: 10px;
+    /* Header styles for mobile */
+    .header {
+        padding: 10px;
+        text-align: center;
+    }
 }
-
-.todo-edit{
-    margin: 10px;
-}
-
-.todo-delete{
-    margin: 10px;
-}
-
-.todo-priority{
-    margin: 10px;
-}
-
-.btn:hover{
-    background-color: rgba(38, 107, 255, 1);
+@media (max-width:400px) {
+    .todo{
+        height: 300px;
+        box-shadow: 1px 2px 20px;
+        text-wrap: balance;
+        text-overflow: ellipsis;
+        display: flex;
+        flex-direction: column;
+    }
 }
